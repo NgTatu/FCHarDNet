@@ -42,7 +42,7 @@ class camvidLoader(data.Dataset):
     def __getitem__(self, index):
         img_name = self.files[self.split][index]
         img_path = self.root + "/" + self.split + "/" + img_name
-        lbl_path = self.root + "/" + self.split + "_labels/" + img_name[:-4]+'.png'
+        lbl_path = self.root + "/" + self.split + "_labels/" + img_name[:-4]+'_L.png'
 
         img = m.imread(img_path)
         img = np.array(img, dtype=np.uint8)
